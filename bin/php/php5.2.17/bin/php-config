@@ -1,0 +1,85 @@
+#! /bin/sh
+
+SED="/usr/bin/sed"
+prefix="/Applications/MAMP/bin/php/php5.2.17"
+exec_prefix="/Applications/MAMP/bin/php/php5.2.17"
+version="5.2.17"
+vernum="50217"
+include_dir="${prefix}/include/php"
+includes="-I$include_dir -I$include_dir/main -I$include_dir/TSRM -I$include_dir/Zend -I$include_dir/ext -I$include_dir/ext/date/lib"
+ldflags=" -L/Applications/MAMP/Library/lib"
+libs="  -lz -lexslt -lexpat -lexpat -lmysqlclient -lldap -llber -liconv -liconv -lt1 -lfreetype -lpng -lz -ljpeg -lssl -lcrypto -lcurl -lbz2 -lz -lssl -lcrypto -lm -lresolv -lxml2 -lz -liconv -lm -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err -lcurl -lidn -lssl -lcrypto -lldap -lz -lxml2 -lz -liconv -lm -lmysqlclient -lz -lxml2 -lz -liconv -lm -lxml2 -lz -liconv -lm -lresolv -lxml2 -lz -liconv -lm -lxml2 -lz -liconv -lm -lxslt -lxml2 -lz -liconv -lm "
+extension_dir='/Applications/MAMP/bin/php/php5.2.17/lib/php/extensions/no-debug-non-zts-20060613'
+program_prefix=""
+program_suffix=""
+exe_extension=""
+php_cli_binary=NONE
+php_cgi_binary=NONE
+configure_options=" '--with-mysql=/Applications/MAMP/Library' '--with-gd' '--with-jpeg-dir=/Applications/MAMP/Library' '--with-png-dir=/Applications/MAMP/Library' '--with-zlib' '--with-zlib-dir=/Applications/MAMP/Library' '--with-freetype-dir=/Applications/MAMP/Library' '--prefix=/Applications/MAMP/bin/php/php5.2.17' '--exec-prefix=/Applications/MAMP/bin/php/php5.2.17' '--sysconfdir=/Applications/MAMP/bin/php/php5.2.17/conf' '--with-config-file-path=/Applications/MAMP/bin/php/php5.2.17/conf' '--enable-bcmath' '--enable-ftp' '--enable-gd-native-ttf' '--with-bz2=/usr' '--with-ldap' '--with-mysqli=/Applications/MAMP/Library/bin/mysql_config' '--with-sqlite' '--with-ttf' '--with-t1lib=/Applications/MAMP/Library' '--enable-mbstring=all' '--with-curl=/Applications/MAMP/Library' '--enable-sockets' '--enable-bcmath' '--with-imap=shared,/Applications/MAMP/Library/lib/imap-2007f' '--enable-soap' '--with-kerberos' '--enable-calendar' '--with-pgsql=shared,/Applications/MAMP/Library/pg' '--enable-dbase' '--enable-exif' '--with-libxml-dir=/Applications/MAMP/Library' '--with-gettext=shared,/Applications/MAMP/Library' '--with-xsl=/Applications/MAMP/Library' '--with-pdo-mysql=shared,/Applications/MAMP/Library' '--with-pdo-pgsql=shared,/Applications/MAMP/Library/pg' '--with-mcrypt=shared,/Applications/MAMP/Library' '--with-openssl' '--enable-zip' '--with-iconv=/Applications/MAMP/Library' '--enable-fastcgi' '--enable-force-cgi-redirect' '--with-tidy=shared' '--enable-wddx' '--with-libexpat-dir=/Applications/MAMP/Library'"
+php_sapis="cli cgi"
+
+# Set php_cli_binary and php_cgi_binary if available
+for sapi in $php_sapis; do
+  case $sapi in
+  cli)
+    php_cli_binary="${exec_prefix}/bin/${program_prefix}php${program_suffix}${exe_extension}"
+    ;;
+  cgi)
+    php_cgi_binary="${exec_prefix}/bin/${program_prefix}php-cgi${program_suffix}${exe_extension}"
+    ;;
+  esac
+done
+
+# Determine which (if any) php binary is available
+if test "$php_cli_binary" != "NONE"; then
+  php_binary="$php_cli_binary"
+else
+  php_binary="$php_cgi_binary"
+fi
+
+# Remove quotes
+configure_options=`echo $configure_options | $SED -e "s#'##g"`
+
+case "$1" in
+--prefix)
+  echo $prefix;;
+--includes)
+  echo $includes;;
+--ldflags)
+  echo $ldflags;;
+--libs)
+  echo $libs;;
+--extension-dir)
+  echo $extension_dir;;
+--include-dir)
+  echo $include_dir;;
+--php-binary)
+  echo $php_binary;;
+--php-sapis)
+  echo $php_sapis;;
+--configure-options)
+  echo $configure_options;;
+--version)
+  echo $version;;
+--vernum)
+  echo $vernum;;
+*)
+  cat << EOF
+Usage: $0 [OPTION]
+Options:
+  --prefix            [$prefix]
+  --includes          [$includes]
+  --ldflags           [$ldflags]
+  --libs              [$libs]
+  --extension-dir     [$extension_dir]
+  --include-dir       [$include_dir]
+  --php-binary        [$php_binary]
+  --php-sapis         [$php_sapis]
+  --configure-options [$configure_options]
+  --version           [$version]
+  --vernum            [$vernum]
+EOF
+  exit 1;;
+esac
+
+exit 0

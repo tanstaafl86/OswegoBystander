@@ -1,0 +1,22 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="AppleTitle" content="MAMP Hilfe">
+    <title>MAMP Hilfe</title><link href="style.css" rel="stylesheet" type="text/css" media="all"></head>
+
+	<body>
+		<div><a href="http://www.mamp.info/"><img id="logo" src="images/logo_small.png" alt="MAMP by appsolute" width="240" height="66"></a></div>
+		<div id="textcontainer" style="clear: both;">
+			<h1>FAQ</h1>
+			<h3>Welche Versionen der enthaltenen Programme sind installiert?</h3>
+            <p><ul><li>Apache 2.2.29</li><li>Nginx 1.8.0</li><li>MySQL 5.5.42</li><li>PHP 5.1.6 &amp; PHP 5.2.17 &amp; 5.3.29 &amp; 5.4.42 &amp; 5.5.26 &amp; 5.6.10</li><li>APC 3.1.13/APCu 4.0.7</li><li>eAccelerator 0.9.6.1</li><li>XCache 1.2.2 &amp; 3.2.0</li><li>Xdebug 2.2.7</li><li>Perl 5.22.0</li><li>mod_perl 2.0.9</li><li>Python 2.7.10</li><li>mod_wsgi 3.5</li><li>mod_python 3.5.0</li><li>phpMyAdmin 4.4.10</li><li>phpLiteAdmin 1.9.5</li><li>SQLiteManager 1.2.4</li><li>Freetype 2.4.12</li><li>t1lib 5.1.2</li><li>curl 7.43.0</li><li>jpeg 8d</li><li>libpng-1.6.6</li><li>tiff 4.0.3</li><li>Ghostscript 9.14</li><li>ImageMagick 6.8.9-7</li><li>Imagick 3.1.2</li><li>gd 2.0.34</li><li>zlib 1.2.8</li><li>ICU 52.1 (Unicode 6.3)</li><li>libxml2 2.8.0</li><li>libxslt 1.1.28</li><li>gettext 0.18.1.1</li><li>libidn 1.17</li><li>iconv 1.14</li><li>mcrypt 2.6.8</li><li>OAuth 1.2.3</li><li>YAZ 4.0.1 &amp; PHP/YAZ 1.1.5</li></ul></p><br>
+			<h3>Wie kann ich das Kennwort für den MySQL-Server ändern?</h3>
+			<p>Öffnen Sie das Terminal und schreiben folgenden Befehl:<br><br><code>/Applications/MAMP/Library/bin/mysqladmin -u root -p password &lt;NEUESKENNWORT&gt;</code><br><br>Anstelle von <code style="left: 0pt;">&lt;NEUESKENNWORT&gt;</code> müssen Sie das gewünschte Kennwort eingeben.<br>Bedenken Sie aber, dass dannach auch das Kennwort für phpMyAdmin und andere Skripte, welche unter MAMP laufen, geändert werden muss. Das Kennwort für phpMyAdmin kann in der Datei /Applications/MAMP/bin/phpMyAdmin/config.inc.php geändert werden.</p><br>
+			<h3>Wo kann ich die Ports für Apache, Nginx und MySQL ändern?</h3>
+			<p>Sie können die Ports im Einstellungsdialog ändern:<br><br><img src="images/ports.png" alt="Ports" width="538" height="406"></p><br>
+			<h3>Wo soll ich meine PHP- und HTML-Seiten abspeichern?</h3>
+			<p>In der Standardeinstellung sollten PHP- und HTML-Seiten in den Ordner htdocs, welcher sich im Ordner /Programme/MAMP befindet, kopiert werden. Dieser Ordner wird auch &quot;Document Root&quot; genannt. Den Pfad für den Dokument Root können Sie jederzeit im Programm MAMP unter Einstellungen ändern:<br/><br/><img src="images/documentRoot.png" alt="Document Root" width="538" height="406"></p><br>
+			<h3>Warum werde ich nach meinem Kennwort gefragt, wenn MAMP die Server startet oder beendet?</h3>
+			<p>Sie haben wahrscheinlich den Apache-Port kleiner als 1024 eingestellt. Bei einem Unix-System, wie Mac OS X, benötigen Sie root-Rechte um IP-Dienste mit Ports kleiner als 1024 zu starten.</p>
+		</div>
+	</body>
+</html>

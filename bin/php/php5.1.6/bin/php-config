@@ -1,0 +1,38 @@
+#! /bin/sh
+
+prefix="/Applications/MAMP/bin/php/php5.1.6"
+exec_prefix="/Applications/MAMP/bin/php/php5.1.6"
+version="5.1.6"
+includedir="${prefix}/include/php"
+includes="-I$includedir -I$includedir/main -I$includedir/TSRM -I$includedir/Zend -I$includedir/ext"
+ldflags=" -L/Applications/MAMP/Library/lib"
+libs="  -lexslt -lexpat -lmysqlclient -lldap -llber -liconv -liconv -lt1 -lfreetype -lpng -lz -ljpeg -lssl -lcrypto -lcurl -lbz2 -lz -lssl -lcrypto -lm -lresolv -lxml2 -lz -liconv -lm -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err -lcurl -lidn -lssl -lcrypto -lldap -lz -lxml2 -lz -liconv -lm -lmysqlclient -lz -lxml2 -lz -liconv -lm -lxml2 -lz -liconv -lm -lxml2 -lz -liconv -lm -lxml2 -lz -liconv -lm -lxslt -lxml2 -lz -liconv -lm "
+extension_dir='/Applications/MAMP/bin/php/php5.1.6/lib/php/extensions/no-debug-non-zts-20050922'
+program_prefix=""
+program_suffix=""
+exe_extension=""
+php_binary="${exec_prefix}/bin/${program_prefix}php${program_suffix}${exe_extension}"
+
+case "$1" in
+--prefix)
+	echo $prefix;;
+--includes)
+	echo $includes;;
+--ldflags)
+	echo $ldflags;;
+--libs)
+	echo $libs;;
+--extension-dir)
+	echo $extension_dir;;
+--include-dir)
+	echo $includedir;;
+--php-binary)
+	echo $php_binary;;
+--version)
+	echo $version;;
+*)
+	echo "Usage: $0 [--prefix|--includes|--ldflags|--libs|--extension-dir|--include-dir|--php-binary|--version]"
+	exit 1;;
+esac
+
+exit 0

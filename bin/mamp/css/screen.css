@@ -1,0 +1,123 @@
+
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	th {
+		background: #F1F1F1;
+	}
+
+	td, th {
+		padding: 3px;
+		border: 1px solid #E1E2E2;
+		text-align: left;
+		vertical-align: top;
+	}
+        
+        
+/* ---------- /TABLES ---------- */
+
+
+div#contentWrap {
+	width: 980px;
+}
+
+div#content {
+	margin-left: 47px;
+	margin-top: 20px;
+}
+
+div.column1 {
+	width: 570px;
+	float: left;
+}
+
+div.column2 {
+	width: 330px;
+	float: right;
+	text-align: left;
+}
+
+/* ---------- HEADER ----------*/
+
+	.headerLeft {
+		float: left;
+		width: 150px;
+		margin-bottom: 20px;
+	}
+
+	.headerRight {
+		float: right;
+		text-align: left;
+		width: 420px;
+		padding-top: 5px;
+		margin-bottom: 20px;
+	}
+
+	.headerRight h1 {
+		font-size: 26px;
+	}
+
+	.headerRight h2 {
+		font-size: 18px;
+		color: #666666;
+	}
+
+/* ---------- /HEADER ----------*/
+
+table.mysql th {
+	width: 100px;
+}
+
+.frame {
+	padding: 20px;
+	border: 1px solid #DCDBDB;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom:20px;
+	
+}
+
+.frame > h1,
+.frame > h2 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+ul.news {
+	margin: 0;
+	padding: 0;
+}
+
+ul.news li {
+	margin: 0 0 10px 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.news li div.headline {
+	margin: 0 0 5px 0;
+	font-weight: bold;
+}
+
+.cb {
+	clear: both;
+}
+
+dl {
+		margin: 0;
+		padding: 0;
+	}
+
+	dl dt {
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	dl dd {
+		margin-bottom: 20px;
+                margin-left:50px;
+	}

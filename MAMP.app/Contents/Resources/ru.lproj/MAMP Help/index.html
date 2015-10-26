@@ -1,0 +1,23 @@
+<html><head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="AppleTitle" content="MAMP Help">
+		<title>MAMP Help</title><link href="style.css" rel="stylesheet" type="text/css" media="all"></head>
+
+	<body>
+		<div><a href="http://www.mamp.info/"><img id="logo" src="images/logo_small.png" alt="MAMP by appsolute" width="240" height="66"></a></div>
+		<div id="textcontainer" style="clear: both;">
+			<h1>FAQ</h1>
+			<h3>Программы каких версий установлены?</h3>
+            <p><ul><li>Apache 2.2.29</li><li>Nginx 1.8.0</li><li>MySQL 5.5.42</li><li>PHP 5.1.6 &amp; PHP 5.2.17 &amp; 5.3.29 &amp; 5.4.42 &amp; 5.5.26 &amp; 5.6.10</li><li>APC 3.1.13/APCu 4.0.7</li><li>eAccelerator 0.9.6.1</li><li>XCache 1.2.2 &amp; 3.2.0</li><li>Xdebug 2.2.7</li><li>Perl 5.22.0</li><li>mod_perl 2.0.9</li><li>Python 2.7.10</li><li>mod_wsgi 3.5</li><li>mod_python 3.5.0</li><li>phpMyAdmin 4.4.10</li><li>phpLiteAdmin 1.9.5</li><li>SQLiteManager 1.2.4</li><li>Freetype 2.4.12</li><li>t1lib 5.1.2</li><li>curl 7.43.0</li><li>jpeg 8d</li><li>libpng-1.6.6</li><li>tiff 4.0.3</li><li>Ghostscript 9.14</li><li>ImageMagick 6.8.9-7</li><li>Imagick 3.1.2</li><li>gd 2.0.34</li><li>zlib 1.2.8</li><li>ICU 52.1 (Unicode 6.3)</li><li>libxml2 2.8.0</li><li>libxslt 1.1.28</li><li>gettext 0.18.1.1</li><li>libidn 1.17</li><li>iconv 1.14</li><li>mcrypt 2.6.8</li><li>OAuth 1.2.3</li><li>YAZ 4.0.1 &amp; PHP/YAZ 1.1.5</li></ul></p><br>
+			<h3>Как можно изменить мой пароль базы данных MySQL?</h3>
+			<p>Откройте терминал и задайте следующее:<br><br><code>/Applications/MAMP/Library/bin/mysqladmin -u root -p password &lt;НОВЫЙ ПАРОЛЬ&gt;</code><br><br>вместо<code style="left: 0pt;"> &lt;НОВЫЙ ПАРОЛЬ&gt;</code> вводится нужный пароль.<br>Примите во внимание,
+что после этого также необходимо изменить пароль для phpMyAdmin и других скриптов, относящихся к MAMP. Пароль для phpMyAdmin можно изменить в файле
+/Applications/MAMP/bin/phpMyAdmin/config.inc.php.</p><br/>
+			<h3>Где можно изменить порты для Apache, Nginx и MySQL?</h3>
+			<p>Возможность изменения портов предоставляется в настройках программы MAMP:<br/><br/><img src="images/ports.png" alt="Ports" width="538" height="406"></p><br/>
+			<h3>Куда я должен сохранять мои страницы PHP и HTML?</h3>
+			<p>Настройка по умолчанию предусматривает сохранение страниц PHP и HTML в папке htdocs, расположенной в папке /Programme/MAMP. Данная папка иначе называется &quot;Document Root&quot;. Путь Dokument Root можно изменить в любой момент в настройках программы MAMP:<br/><br/><img src="images/documentRoot.png" alt="Document Root" width="538" height="406"></p><br/>
+			<h3>Почему появляется окно ввода пароля как при запуске, так и при выходе из программы MAMP?</h3>
+			<p>Вероятно, задан порт Apache менее, чем 1024. В системе Unix, такой как Mac OS X, для того, чтобы воспользоваться услугами провайдера с портами менее 1024, требуются права root.</p>
+		</div>
+	</body></html>

@@ -1,0 +1,22 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="AppleTitle" content="MAMP Help">
+    <title>MAMP Help</title><link href="style.css" rel="stylesheet" type="text/css" media="all"></head>
+
+	<body>
+		<div><a href="http://www.mamp.info/"><img id="logo" src="images/logo_small.png" alt="MAMP by appsolute" width="240" height="66"></a></div>
+		<div id="textcontainer" style="clear:both">
+			<h1>FAQ</h1>
+			<h3>Which programs are installed?</h3>
+            <p><ul><li>Apache 2.2.29</li><li>Nginx 1.7.10</li><li>MySQL 5.5.42</li><li>PHP 5.1.6 &amp; PHP 5.2.17 &amp; 5.3.29 &amp; 5.4.39 &amp; 5.5.23 &amp; 5.6.7</li><li>APC 3.1.13/APCu 4.0.7</li><li>eAccelerator 0.9.6.1</li><li>XCache 1.2.2 &amp; 3.2.0</li><li>Xdebug 2.2.5</li><li>Perl 5.20.0</li><li>mod_perl 2.0.8</li><li>Python 2.7.8</li><li>mod_wsgi 3.4</li><li>mod_python 3.5.0</li><li>phpMyAdmin 4.4.1.1</li><li>phpLiteAdmin 1.9.5</li><li>SQLiteManager 1.2.4</li><li>Freetype 2.4.12</li><li>t1lib 5.1.2</li><li>curl 7.41.0</li><li>jpeg 8d</li><li>libpng-1.6.6</li><li>tiff 4.0.3</li><li>Ghostscript 9.14</li><li>ImageMagick 6.8.9-7</li><li>Imagick 3.1.2</li><li>gd 2.0.34</li><li>zlib 1.2.8</li><li>ICU 52.1 (Unicode 6.3)</li><li>libxml2 2.8.0</li><li>libxslt 1.1.28</li><li>gettext 0.18.1.1</li><li>libidn 1.17</li><li>iconv 1.14</li><li>mcrypt 2.6.8</li><li>OAuth 1.2.3</li><li>YAZ 4.0.1 &amp; PHP/YAZ 1.1.5</li></ul></p><br>
+			<h3>How can I change the password of MySQL?</h3>
+			<p>Open the terminal and type the following:<br /><br /><code>/Applications/MAMP/Library/bin/mysqladmin -u root -p password &lt;NEWPASSWORD&gt;</code><br /><br />Instead of <code style="left:0">&lt;NEWPASSWORD&gt;</code> use the new password you want.<br />Afterwards, you also need to change the password for phpMyAdmin and other scripts which are running under MAMP. You can change the password for phpMyAdmin in the file /Applications/MAMP/bin/phpMyAdmin/config.inc.php</p><br>
+			<h3>Where can I change the ports for Apache, Nginx and MySql?</h3>
+			<p>You can change the ports in the Preferences dialog:<br><br><img src="images/ports.png" alt="Ports" width="538" height="406"></p><br>
+			<h3>Where should I put my HTML and PHP pages?</h3>
+			<p>By default, PHP and HTML Pages should be copied into the htdocs folder which is located under /Applications/MAMP. This folder is called &quot;Document Root&quot;. You can change the path for the Document Root in the MAMP program under Preferences:<br><br><img src="images/documentRoot.png" alt="Document Root" width="538" height="406"></p><br>
+			<h3>Why does MAMP ask for a password when starting and stopping servers?</h3>
+			<p>You probably have set the Apache port to a value smaller than 1024. On a Unix system like Mac OS X you must have root permissions to start IP services with ports smaller than 1024.</p>
+		</div>
+	</body>
+</html>

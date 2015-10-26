@@ -1,0 +1,64 @@
+#!/bin/sh
+
+ARGV="$@"
+
+#
+# |||||||||||||||||||| START CONFIGURATION SECTION  ||||||||||||||||||||
+# --------------------                              --------------------
+# 
+# the path to your nginx binary, including options if necessary
+NGINX='/Applications/MAMP/Library/sbin/nginx'
+#
+# pick up any necessary environment variables
+if test -f /Applications/MAMP/Library/bin/envvars; then
+  . /Applications/MAMP/Library/bin/envvars
+fi
+#
+# Set this variable to a command that increases the maximum
+# number of file descriptors allowed per child process. This is
+# critical for configurations that use many file descriptors,
+# such as mass vhosting, or a multithreaded server.
+ULIMIT_MAX_FILES=`ulimit -H -n`
+# --------------------                              --------------------
+# ||||||||||||||||||||   END CONFIGURATION SECTION  ||||||||||||||||||||
+
+# Set the maximum number of file descriptors allowed per child process.
+if [ "$ULIMIT_MAX_FILES" != "unlimited" ] ; then
+    if [ $? -eq 0 ]; then
+        ulimit -S -n "$ULIMIT_MAX_FILES"
+    fi
+fi
+
+ERROR=0
+if [ "x$ARGV" = "x" ] ; then 
+    ARGV="-h"
+fi
+
+case $ARGV in
+start)
+    $NGINX
+    ERROR=$?
+    ;;
+stop)
+    kill -QUIT $( cat /Applications/MAMP/Library/logs/nginx.pid )
+    ERROR=$?
+    ;;
+restart)
+    kill -HUP $( cat /Applications/MAMP/Library/logs/nginx.pid )
+    ERROR=$?
+    ;;
+test|configtest)
+    $NGINX -t
+    ERROR=$?
+    ;;
+status)
+    $NGINX -V
+    ERROR=$?
+    ;;
+*)
+    $NGINX "$@"
+    ERROR=$?
+esac
+
+exit $ERROR
+

@@ -1,0 +1,170 @@
+{
+  "app": "MAMP",
+  "version": "3.4",
+  "components": [
+    {
+      "name": "Apache",
+      "version": "2.2.29"
+    },
+    {
+      "name": "Nginx",
+      "version": "1.8.0"
+    },
+    {
+      "name": "MySQL",
+      "version": "5.5.42"
+    },
+    {
+      "name": "MySQL Utilities",
+      "version": "1.5.4"
+    },
+    {
+      "name": "PHP",
+      "version": "5.1.6, 5.2.17, 5.3.29, 5.4.42, 5.5.26 & 5.6.10"
+    },
+    {
+      "name": "APC/apcu",
+      "version": "3.1.13/4.0.7"
+    },
+    {
+      "name": "eAccelerator",
+      "version": "0.9.6.1"
+    },
+    {
+      "name": "XCache",
+      "version": "1.2.2 & 3.2.0"
+    },
+    {
+      "name": "Xdebug",
+      "version": "2.2.7"
+    },
+    {
+      "name": "Perl",
+      "version": "5.22.0"
+    },
+    {
+      "name": "mod_perl",
+      "version": "2.0.9"
+    },
+    {
+      "name": "DBI",
+      "version": "1.633"
+    },
+    {
+      "name": "DBD::mysql",
+      "version": "4.031"
+    },
+    {
+      "name": "Python",
+      "version": "2.7.10"
+    },
+    {
+      "name": "mod_wsgi",
+      "version": "3.5"
+    },
+    {
+      "name": "mod_python",
+      "version": "3.5.0"
+    },
+    {
+      "name": "MySQL Connector/Python",
+      "version": "2.0.4"
+    },
+    {
+      "name": "phpMyAdmin",
+      "version": "4.4.10"
+    },
+    {
+      "name": "phpLiteAdmin",
+      "version": "1.9.5"
+    },
+    {
+      "name": "SQLiteManager",
+      "version": "1.2.4"
+    },
+    {
+      "name": "Freetype",
+      "version": "2.4.12"
+    },
+    {
+      "name": "t1lib",
+      "version": "5.1.2"
+    },
+    {
+      "name": "curl",
+      "version": "7.43.0"
+    },
+    {
+      "name": "jpeg",
+      "version": "8d"
+    },
+    {
+      "name": "libpng",
+      "version": "1.6.6"
+    },
+    {
+      "name": "tiff",
+      "version": "4.0.3"
+    },
+    {
+      "name": "ImageMagick",
+      "version": "6.8.9-7"
+    },
+    {
+      "name": "Imagick",
+      "version": "3.1.2"
+    },
+    {
+      "name": "PHPUnit",
+      "version": "4.7.6"
+    },
+    {
+      "name": "Ghostscript",
+      "version": "9.14"
+    },
+    {
+      "name": "gd",
+      "version": "2.0.34"
+    },
+    {
+      "name": "zlib",
+      "version": "1.2.8"
+    },
+    {
+      "name": "ICU",
+      "version": "52.1 (Unicode 6.3)"
+    },
+    {
+      "name": "libxml2",
+      "version": "2.8.0"
+    },
+    {
+      "name": "libxslt",
+      "version": "1.1.28"
+    },
+    {
+      "name": "gettext",
+      "version": "0.18.1.1"
+    },
+    {
+      "name": "libidn",
+      "version": "1.17"
+    },
+    {
+      "name": "iconv",
+      "version": "1.14"
+    },
+    {
+      "name": "mcrypt",
+      "version": "2.6.8"
+    },
+    {
+      "name": "OAuth",
+      "version": "1.2.3"
+    },
+    {
+      "name": "YAZ",
+      "version": "4.0.1 & PHP/YAZ 1.1.5"
+    }
+  ]
+}

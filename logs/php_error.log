@@ -1,0 +1,2 @@
+[19-Oct-2015 18:11:24 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /Applications/MAMP/htdocs/index.php on line 15
+[19-Oct-2015 18:11:39 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /Applications/MAMP/htdocs/index.php on line 15
