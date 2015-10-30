@@ -1,2 +1,8 @@
 [19-Oct-2015 18:11:24 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /Applications/MAMP/htdocs/index.php on line 15
 [19-Oct-2015 18:11:39 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /Applications/MAMP/htdocs/index.php on line 15
+[29-Oct-2015 01:26:29 UTC] PHP Fatal error:  Call to undefined function get_button() in /Applications/MAMP/htdocs/wordpress/wp-content/themes/starter/index.php on line 55
+[29-Oct-2015 01:32:40 UTC] PHP Fatal error:  Call to undefined function get_button() in /Applications/MAMP/htdocs/wordpress/wp-content/themes/starter/index.php on line 55
+[29-Oct-2015 01:34:23 UTC] PHP Fatal error:  Call to undefined function get_button() in /Applications/MAMP/htdocs/wordpress/wp-content/themes/starter/index.php on line 55
+[29-Oct-2015 01:36:13 UTC] PHP Fatal error:  Call to undefined function get_button() in /Applications/MAMP/htdocs/wordpress/wp-content/themes/starter/index.php on line 55
+[29-Oct-2015 01:36:16 UTC] PHP Fatal error:  Call to undefined function get_button() in /Applications/MAMP/htdocs/wordpress/wp-content/themes/starter/index.php on line 55
+[29-Oct-2015 01:37:51 UTC] PHP Fatal error:  Call to undefined function get_button() in /Applications/MAMP/htdocs/wordpress/wp-content/themes/starter/index.php on line 55

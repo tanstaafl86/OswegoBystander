@@ -52,4 +52,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
+<?php include 'button.php';?>
 <?php get_footer(); ?>
